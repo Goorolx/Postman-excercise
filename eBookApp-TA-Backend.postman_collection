@@ -46,6 +46,43 @@
 					"response": []
 				},
 				{
+					"name": "2.1.1 postNewTitlePolish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": 147,\n\t\"title\": \"Pójdź że, Kiń tę chmurność w głąb czaszy\",\n\t\"author\": \"Łoł stój\",\n\t\"year\": 1234\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/",
+							"protocol": "https",
+							"host": [
+								"ta-ebookrental-be",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"titles",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "147",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "2.2a postNewEmptyTitle",
 					"request": {
 						"method": "POST",
@@ -162,7 +199,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=2",
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=147",
 							"protocol": "https",
 							"host": [
 								"ta-ebookrental-be",
@@ -176,7 +213,7 @@
 							"query": [
 								{
 									"key": "userId",
-									"value": "2"
+									"value": "147"
 								}
 							]
 						}
@@ -190,7 +227,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 217,\n\t\"title\": \"Kalarepa\",\n\t\"author\": \"Ann Marchew\",\n\t\"year\": 1008\n}",
+							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 284,\n\t\"title\": \"Kalarepa\",\n\t\"author\": \"Ann Marchew\",\n\t\"year\": 1008\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +263,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=147&id=224",
+							"raw": "https://ta-ebookrental-be.herokuapp.com/titles/?userId=147&id=284",
 							"protocol": "https",
 							"host": [
 								"ta-ebookrental-be",
@@ -244,7 +281,7 @@
 								},
 								{
 									"key": "id",
-									"value": "224"
+									"value": "284"
 								}
 							]
 						}
@@ -289,13 +326,13 @@
 					"response": []
 				},
 				{
-					"name": "1.12 goodLoginJohnTester",
+					"name": "1.12 goodLoginZbigniewTester",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"login\": \"goorolx\",\n\t\"password\": \"rudy103\"\n}",
+							"raw": "{\n\t\"login\": \"Zbigniew Tester\",\n\t\"password\": \"rudy102\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -398,7 +435,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"login\": \"goorol\",\n\t\"password\": \"rudy103\"\n}",
+							"raw": "{\n\t\"login\": \"goorolx\",\n\t\"password\": \"rudy1031\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -440,7 +477,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"login\": \"John Tester\",\n\t\"password\": \"rudy1030\"\n}",
+							"raw": "{\n\t\"login\": \"Zbigniew Tester\",\n\t\"password\": \"rudy103\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -587,7 +624,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\t\"userId\": 147,\r\n\t\t\"id\": 225,\r\n        \"purchaseDate\": \"2222-06-12\"\r\n}",
+							"raw": "{\r\n\t\t\"userId\": 147,\r\n\t\t\"id\": 280,\r\n        \"purchaseDate\": \"2222-06-12\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -616,7 +653,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://ta-ebookrental-be.herokuapp.com/items/?userId=147&id=225",
+							"raw": "https://ta-ebookrental-be.herokuapp.com/items/?userId=147&id=280",
 							"protocol": "https",
 							"host": [
 								"ta-ebookrental-be",
@@ -634,7 +671,7 @@
 								},
 								{
 									"key": "id",
-									"value": "225"
+									"value": "280"
 								}
 							]
 						}
@@ -697,7 +734,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userId\": 147,\n\t\"itemId\": 195,\n\t\"customerName\": \"someWeirdTester\",\n\t\"rentDate\": \"2020-06-01\"\n}",
+							"raw": "{\n\t\"userId\": 147,\n\t\"itemId\": 195,\n\t\"customerName\": \"someWeirdTesterSki\",\n\t\"rentDate\": \"2020-06-18\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -739,7 +776,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userId\": 147,\n\t\"itemId\": 195,\n\t\"customerName\": \"Duplicate Tester\",\n\t\"rentDate\": \"2020-06-12\"\n}",
+							"raw": "{\n\t\"userId\": 147,\n\t\"itemId\": 195,\n\t\"customerName\": \"Duplicate Tester\",\n\t\"rentDate\": \"2020-06-18\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -781,7 +818,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 226,\n\t\"customerName\": \"someWeirdTester\",\n\t\"rentDate\": \"2020-06-01\"\n\t\"expirationDate\": \"2020-06-21\"\n}",
+							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 282,\n\t\"customerName\": \"someWeirdTesterEk\",\n\t\"rentDate\": \"2020-06-01\",\n\t\"expirationDate\": \"2020-06-21\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -823,7 +860,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 226,\n\t\"customerName\": \"someWeirdTester\",\n\t\"rentDate\": \"2020-06-01\",\n\t\"expirationDate\": \"2020-06-12\"\n}",
+							"raw": "{\n\t\"userId\": 147,\n\t\"id\": 282,\n\t\"customerName\": \"someWeirdTester\",\n\t\"rentDate\": \"2020-06-01\",\n\t\"expirationDate\": \"2020-06-19\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
