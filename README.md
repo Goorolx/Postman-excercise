@@ -1,2 +1,2 @@
 # kodilla-tester-final
-My final project of automated tester course 
+Part of my final project of automated tester course, this repo contains Postman Collections
