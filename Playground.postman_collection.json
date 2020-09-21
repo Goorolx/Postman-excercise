@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "d3cf86fd-d634-42b4-96c0-49a61d81e437",
+		"name": "Playground",
+		"description": "This is my space for practicing and playing with new things.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetFileExample",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://testtraining.org/data.txt",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"data.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutFileExample",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "a,b,c,d,e"
+				},
+				"url": {
+					"raw": "https://testtraining.org/putdata.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"putdata.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchFileExample",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "0=Amelie"
+				},
+				"url": {
+					"raw": "https://testtraining.org/patchdata.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"patchdata.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostFileExample",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "3"
+				},
+				"url": {
+					"raw": "https://testtraining.org/deletedata.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"deletedata.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BasicAuth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secretpassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://testtraining.org/basicauth.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"basicauth.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostBearerAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EXAMPLETOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "secretpassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://testtraining.org/login.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BearerAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EXAMPLETOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://testtraining.org/bearerauth.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"bearerauth.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soapexample",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sam=\"http://www.soapui.org/sample/\">;\r\n    <soap:Header/>\r\n    <soap:Body>\r\n        <sam:search>\r\n            <searchstring>Alice</searchstring>\r\n        </sam:search>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testtraining.org/soapexample.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"soapexample.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSONexample",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"searchstring\": \"Alice\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testtraining.org/jsonexample.php",
+					"protocol": "https",
+					"host": [
+						"testtraining",
+						"org"
+					],
+					"path": [
+						"jsonexample.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a87fcf7e-7589-44b5-8a3b-49683018444f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cddf007b-d264-477c-b9f3-a7e7ce7381e6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
